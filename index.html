@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	<title>Sharad Shaiwal</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+	
+<body>
+	<section class="header">
+		<nav>
+			<a href="index.html"><img src="icons/logo.png"></a>
+			<div class= "nav-links" id="navlinks">
+				<img class= "fa" src="https://img.icons8.com/small/16/000000/exit.png"/ onclick="hideMenu()">
+				<ul>
+					<li><a href="#Projects">PROJECTS</a></li>
+					<li><a href="#aboutsection">ABOUT</a></li>
+					<li><a href="">CONTACT</a></li>
+				</ul>
+			</div>
+			<img class="fa" src="https://img.icons8.com/android/24/ffffff/menu.png"/ onclick="showMenu()">
+		</nav>
+		<div class="text-box">
+			<h1>HELLO WORLD!</h1>
+			<p>I am a software developer</p>
+			<a href="#Projects" class="hero-btn">Know More</a>
+		</div>
+	</section>
+	<section class="projectshead" id="Projects">
+		<h1>My Projects</h1>
+	</section>
+	<div class="hero">
+		<div class="container">
+			<div class="indicator">
+				<span class="btn active"></span>
+				<span class="btn"></span>
+				<span class="btn"></span>
+			</div>
+			<div class="proj">
+			<div class="slide-row" id="slide1">
+				<div class="slide-col">
+				<div class="user-text">
+					<h3>Discord Bot</h3>
+					<p>Discord Bot is a user inetractive bot which can perform certain commands such as meme sharing, movie recommendations, roasting or events saving etc.</p>
+				</div>
+				<div class="user-img">
+					<img src="images/discordproject.jpg">
+				</div>
+				</div><div class="slide-col">
+				<div class="user-text">
+					<h3>Motion Detection</h3>
+					<p>Using OpenCV it can detect motion of any kind and render different kinds of output like threshold frame,normal frame,difference frame.</p>
+				</div>
+				<div class="user-img">
+					<img src="images/motionproject.jpg">
+				</div>
+				</div><div class="slide-col">
+				<div class="user-text">
+					<h3>Collage</h3>
+					<p>Collage is a program which converts a normal image into a collage of thousands of small images from the dataset.</p>
+				</div>
+				<div class="user-img">
+					<img src="images/collageproject.jpg">
+				</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="hero">
+		<div class="container">
+			<div class="indicator">
+				<span class="btn active"></span>
+				<span class="btn"></span>
+				<span class="btn"></span>
+			</div>
+			<div class="proj">
+			<div class="slide-row" id="slide2">
+				<div class="slide-col">
+				<div class="user-text">
+					<h3>Mario clone</h3>
+					<p>As the name suggest it is a clone of the famous 2d game mario.</p>
+				</div>
+				<div class="user-img">
+					<img src="images/marioproject.jpg">
+				</div>
+				</div><div class="slide-col">
+				<div class="user-text">
+					<h3>Piano</h3>
+					<p>This app is for the music geeks who want to play piano on there computer,with some famous songs inbuild this app can be pretty fun for music lovers.</p>
+				</div>
+				<div class="user-img">
+					<img src="images/pianoproject.jpg">
+				</div>
+				</div><div class="slide-col">
+				<div class="user-text">
+					<h3>Pong</h3>
+					<p>Heres something from the 90s, the famous pong game for computer vs user.</p>
+				</div>
+				<div class="user-img">
+					<img src="images/pongproject.jpg">
+				</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="about-section" id="aboutsection">
+		<div class="about-container">
+			<div class="about-content">
+				<div  class="title-section">
+					<h1>About Me</h1>
+				</div>
+				<div class="content-section">
+					<h3>Software Developer</h3>
+					<p>I am Sharad Shaiwal, a student currently pursuing b.tech in computer science and technology from one of the prestigious institutes of India – the national institute of technology Agartala.</p>
+					<p>I always had an inclination towards coding and programming. Currently, I m satisfactory at languages such as python and java and passionate to keep learning further.</p>
+					<p>You can download my <b>resume</b> by clicking <a href="pdf/resume.pdf">here</a>.</p>
+					<p>For more awsome projects check out my github handle.</p>
+					<div class="proj-button">
+						<a href="https://github.com/sharad-0-1">More Projects</a>
+					</div>
+				</div>
+				<div class="image-section">
+					<img src="images/me.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!------toggle top menu------->
+<script>
+	var navlinks = document.getElementById('navlinks');
+
+	function showMenu() {
+		navlinks.style.right = "0px";
+	}
+	function hideMenu() {
+		navlinks.style.right = "-200px";
+	}
+</script>
+<!-------project slider-------->
+<script >
+	var btn = document.getElementsByClassName("btn");
+	var slide1 = document.getElementById("slide1");
+	var slide2 = document.getElementById("slide2");
+
+	btn[0].onclick = function() {
+		slide1.style.transform = "translateX(0px)";
+		for(i = 0; i <3;i++)
+		{
+			btn[i].classList.remove("active");
+		}
+		this.classList.add("active");
+	}
+	btn[1].onclick = function() {
+		slide1.style.transform = "translateX(-1066px)";
+		for(i = 0; i <3;i++)
+		{
+			btn[i].classList.remove("active");
+		}
+		this.classList.add("active");
+	}
+	btn[2].onclick = function() {
+		slide1.style.transform = "translateX(-2133px)";
+		for(i = 0; i <3;i++)
+		{
+			btn[i].classList.remove("active");
+		}
+		this.classList.add("active");
+	}
+	btn[3].onclick = function() {
+		slide2.style.transform = "translateX(0px)";
+		for(i = 3; i <6;i++)
+		{
+			btn[i].classList.remove("active");
+		}
+		this.classList.add("active");
+	}
+	btn[4].onclick = function() {
+		slide2.style.transform = "translateX(-1066px)";
+		for(i = 3; i <6;i++)
+		{
+			btn[i].classList.remove("active");
+		}
+		this.classList.add("active");
+	}
+	btn[5].onclick = function() {
+		slide2.style.transform = "translateX(-2133px)";
+		for(i = 3; i <6;i++)
+		{
+			btn[i].classList.remove("active");
+		}
+		this.classList.add("active");
+	}
+</script>
+</body>
+</html>
